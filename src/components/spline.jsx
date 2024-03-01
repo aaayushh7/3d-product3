@@ -135,6 +135,13 @@ export default function App() {
                         <p className="text-white">XL</p>
                     </div>
                 </div>
+                <div className=" fixed bottom-[370px] border border-gray-300 rounded-md p-4 pb-[65px] ml-[90px]">
+                <h1 className='text-[22px] font-bold text-center mb-2'>Expectancy</h1>
+
+                <div className=" h-1 w-[350px] bg-gray-200 rounded-sm">
+                    <div className=" left-0 h-1 bottom-9 bg-blue-500 rounded-sm " style={{ width: '90%' }}></div>
+                    <h1 className='text-[22px] text-center mt-3'>Great! 4+ years.</h1>
+                </div></div>
                 <div className='flex'>
                     <button onClick={handleCameraAccess} className='fixed bottom-8 right-[350px] px-7 py-3 shadow-md items-center justify-center bg-[#5f80ea] rounded-md cursor-pointer'>View in AR web</button>
                     <video ref={videoRef} width="640" height="480" autoPlay></video>
