@@ -3,10 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <script type="module" src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
+
+    <title>TRY 3d</title>
   </head>
+  <style>
+    .spinner {
+     background-color: rgb(24, 24, 25) !important;
+     opacity: 1;
+     position: fixed;
+     align-items: center;
+     display: flex;
+     height: 100vh;
+     left: 0;
+     right: 0;
+     top: 0;
+     justify-content: center;
+     width: 100%;
+     transition: opacity 0.5s ease-out;
+     z-index: 90;
+   }
+
+   .hide {
+     opacity: 0;
+     
+   }
+ </style>
+
+ <script>
+   setTimeout(function() {
+     var spinner = document.getElementById('spinner');
+     spinner.classList.add('hide');
+   
+     setTimeout(function() {
+       spinner.style.display = 'none';
+     }, 1000);
+   }, 5000);
+   
+ </script>
+ 
   <body>
+    <div id="spinner" class="spinner">
+      <!-- <img src="ld2.gif" /> -->
+    
+  <dotlottie-player autoplay loop mode="normal"
+        src="./src/assets/343434.lottie"
+        style="width: 320px;height:320px;"></dotlottie-player>
+  
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
